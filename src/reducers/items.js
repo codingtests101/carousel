@@ -23,10 +23,10 @@ export function items(state = [], action) {
     }
 }
 
-export function currentIndex(state = [], action) {
+export function currentPage(state = [], action) {
     switch (action.type) {
-        case 'ITEMS_CURRENT_INDEX':
-            return action.index;
+        case 'ITEMS_CURRENT_PAGE':
+            return action.page;
         default:
             return state;
     }

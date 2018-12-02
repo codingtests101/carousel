@@ -16,10 +16,10 @@ export function itemsFetchDataSuccess(data) {
         items: data
     };
 }
-export function itemsCurrentIndex(index) {
+export function itemsCurrentPage(val) {
     return {
-        type: 'ITEMS_CURRENT_INDEX',
-        index
+        type: 'ITEMS_CURRENT_PAGE',
+        page: val
     };
 }
 function processData(data){
@@ -43,7 +43,7 @@ export function itemsFetchData(url) {
             })
             .then((response) => response.json())
             .then((data) => dispatch(itemsFetchDataSuccess(processData(data))))
-            .then((index) => dispatch(itemsCurrentIndex(0)))
+            .then(() => dispatch(itemsCurrentPage(0)))
             .catch(() => dispatch(itemsHasErrored(true)));
     };
 }

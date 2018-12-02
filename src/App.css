@@ -1,28 +1,77 @@
 .App{
   text-align: center;
-  
+  background-color: lightgray;
 }
 .App__container{
   width: 96rem;
   margin: 0 auto;
   height: 100vh;
   overflow: hidden;
+  background-color: lightgray;
 }
 .Carousel{
-  display: inline-block;
+  margin-top: 200px;
   left: 0;
   top:0;
-  height: 45vh;
-  width: 1280rem;
-  background-color: blue;
+  height: 320px;
 }
-.Carousel div{
+
+.Carousel__images{
+  text-align: left;
   top:0;
-  height: 100%;
-  display: inline-block;
+  left: 0;
+  height: 250px;
+  width: 960px;
+  background-color: white;
 }
-.Carousel__img{
-  width: 64rem;
-  height: 100%;
+.Carousel__image--container{
   display: inline-block;
+  padding: 0;
+  left: 0;
+  height: 100%;
+  margin-bottom: 10px;
+}
+.Carousel__image--div{
+  margin-left: 27px;
+  margin-top: 27px;
+  height: 190px;
+  display: inline-block;
+  height: 160px;
+}
+.Carousel__image--img{
+  top:0;
+  left:0;
+  width: 160px;
+  height: 160px;
+}
+.Carousel__text{
+  display: block;
+  margin: 0 auto;
+  margin-top:10px;
+  text-align: center;
+  font-size: 18px;
+}
+.Carousel__buttons{
+  margin: 20px;
+  display: block;
+
+}
+.Carousel__buttons button{
+  background-color: royalblue;
+  height: 40px;
+  width : 100px;
+  margin-bottom: 10px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+  font-size: 14px;
+  font-weight: bold;
+  color:white;
+}
+.Carousel__buttons--btn1{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.Carousel__buttons--btn2{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
