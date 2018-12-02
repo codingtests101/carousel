@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { itemsFetchData, itemsCurrentPage } from '../actions/items';
 class ImageSlider extends Component {
-    constructor(){
-        super();
-        this.carousel = React.createRef();
-    }
     componentDidMount() {
         this.props.fetchData('https://pixabay.com/api/?key=9656065-a4094594c34f9ac14c7fc4c39&q=beautiful+landscape&image_type=photo'); 
     }
@@ -26,7 +22,7 @@ class ImageSlider extends Component {
         var btn1disabled = true;
         
         return (
-            <div className="Carousel" ref={this.carousel}>
+            <div className="Carousel" >
                 <div className="Carousel__images">
                     {
                         this.props.items.map((item,index) => {
@@ -59,8 +55,18 @@ class ImageSlider extends Component {
                             
                             return res;
                         })
-                    }
+                    } 
+                    <div className="Carousel__arrow" >
+                        <svg className="Carousel__arrow--left" onClick={!btn1disabled ? this.prevClick.bind(this,this.props.page):()=>{}}>       
+                            <image href="../svg/arrow.svg"  />    
+                        </svg>
+                        <svg className="Carousel__arrow--right" onClick={!btn2disabled ? this.nextClick.bind(this,this.props.page):()=>{}}>       
+                            <image href="../svg/arrow.svg"  />    
+                        </svg>
+                    </div>
+
                 </div>
+               
                 <div className="Carousel__buttons">
                     <button type="button" className="Carousel__buttons--btn1" disabled={btn1disabled}
                         onClick={this.prevClick.bind(this,this.props.page)}>Prev</button>

@@ -3,69 +3,83 @@
   background-color: lightgray;
 }
 .App__container{
-  width: 96rem;
+  width: 100vw;
   margin: 0 auto;
   height: 100vh;
   overflow: hidden;
   background-color: lightgray;
 }
+.App__container h1{
+  text-align: left;
+  font-family: 'Ropa Sans', sans-serif;
+  font-size: 6.4rem;
+  top:10rem;
+  margin-top: 50px;
+  padding-left: 2.7rem;
+}
 .Carousel{
-  margin-top: 200px;
+  margin-top: 50px;
   left: 0;
   top:0;
-  height: 320px;
+  height: 100vh;
 }
-
 .Carousel__images{
   text-align: left;
   top:0;
   left: 0;
-  height: 250px;
-  width: 960px;
+  height: calc(20vw + 10vh);
+  width: calc(100vw-5.4rem);
   background-color: white;
 }
 .Carousel__image--container{
   display: inline-block;
-  padding: 0;
   left: 0;
-  height: 100%;
-  margin-bottom: 10px;
+  height: 40vh;
+  padding-right: 2.7rem;
+  padding-bottom: 10px;
+  width: 20%;
 }
 .Carousel__image--div{
-  margin-left: 27px;
-  margin-top: 27px;
-  height: 190px;
+  padding-left: 2.7rem;
+  padding-top: 2.7rem;
   display: inline-block;
-  height: 160px;
+  width: 100%;
+  overflow: hidden;
 }
 .Carousel__image--img{
   top:0;
   left:0;
-  width: 160px;
-  height: 160px;
+  width:20vw;
+  height: 20vw;
 }
+
 .Carousel__text{
   display: block;
   margin: 0 auto;
   margin-top:10px;
   text-align: center;
   font-size: 18px;
+  font-family: 'Ropa Sans', sans-serif;
+  height: 15vh;
+  margin-bottom: 20px;
 }
 .Carousel__buttons{
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: block;
-
+  text-align: center;
 }
 .Carousel__buttons button{
-  background-color: royalblue;
+  background-color:  rgba(63,114,157,255);
   height: 40px;
   width : 100px;
   margin-bottom: 10px;
   margin-left: 2.5px;
   margin-right: 2.5px;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: bold;
   color:white;
+  font-family: 'Ropa Sans', sans-serif;
 }
 .Carousel__buttons--btn1{
   border-top-left-radius: 10px;
@@ -74,4 +88,81 @@
 .Carousel__buttons--btn2{
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+.Carousel__arrow{
+  position: absolute;
+  z-index: 1;
+  top: 258px;
+  height: 160px;
+  display: inline-block;
+}
+.Carousel__arrow--left{
+  position: fixed;
+  width:80px;
+  height: 160px;
+  left: 0;
+  transform: rotate(180deg);
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  opacity: 0.35;
+  background-color:darkgray;
+}
+.Carousel__arrow--left:hover{
+  opacity: 1;
+}
+.Carousel__arrow--right{
+  position: fixed;
+  width:80px;
+  height: 160px;
+  right:0;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  opacity: 0.2;
+  background-color:darkgray;
+}
+.Carousel__arrow--right:hover{
+  opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .App__container h1{
+    font-size: 3.6rem;
+    padding-left: 2rem;
+  }
+  .Carousel{
+    padding-left: 0;
+    padding-right:0;
+    height: 65vh;
+  }
+  .Carousel__images{
+    overflow: hidden;
+    height: 65vh;
+  }
+  .Carousel__image--container{
+    display: inline-block;
+    left: 0;
+    height: 65vh;
+    padding-right: 2.7rem;
+    padding-bottom: 10px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .Carousel__image--img
+  {
+    height: 90vw;
+    width: 90vw;
+  }
+  .Carousel__image--text{
+    margin-left: 2.7rem;
+  }
+  .Carousel__arrow--left{
+    left: 2.7rem;
+  }
+  .Carousel__arrow--right{
+    right: 2.7rem;
+  }
 }

@@ -6,6 +6,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App__container">
+          <h1>Carousel Test</h1>
           <ImageSlider/>
         </div>
         
