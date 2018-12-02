@@ -15,8 +15,8 @@ class ImageSlider extends Component {
         return (
             <div className="Carousel">
                 {this.props.items.map((item) => (
-                    <div>
-                        <img key={item.id} className="Carousel__img" src={item.imageURL} alt={item.tags}/>
+                    <div key={item.id}>
+                        <img  className="Carousel__img" src={item.imageURL} alt={item.tags}/>
                     </div>
                 ))}
             </div>
