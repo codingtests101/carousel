@@ -1,0 +1,28 @@
+.App{
+  text-align: center;
+  
+}
+.App__container{
+  width: 96rem;
+  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
+}
+.Carousel{
+  display: inline-block;
+  left: 0;
+  top:0;
+  height: 45vh;
+  width: 1280rem;
+  background-color: blue;
+}
+.Carousel div{
+  top:0;
+  height: 100%;
+  display: inline-block;
+}
+.Carousel__img{
+  width: 64rem;
+  height: 100%;
+  display: inline-block;
+}
