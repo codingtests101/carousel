@@ -57,12 +57,12 @@ class ImageSlider extends Component {
                         })
                     } 
                     <div className="Carousel__arrow" >
-                        <svg className="Carousel__arrow--left" onClick={!btn1disabled ? this.prevClick.bind(this,this.props.page):()=>{}}>       
-                            <image href="../svg/arrow.svg"  />    
-                        </svg>
-                        <svg className="Carousel__arrow--right" onClick={!btn2disabled ? this.nextClick.bind(this,this.props.page):()=>{}}>       
-                            <image href="../svg/arrow.svg"  />    
-                        </svg>
+                        <div className="Carousel__arrow--left" onClick={!btn1disabled ? this.prevClick.bind(this,this.props.page):()=>{}}>       
+                            <img src="../svg/arrow.svg" alt="left"  />    
+                        </div>
+                        <div className="Carousel__arrow--right" onClick={!btn2disabled ? this.nextClick.bind(this,this.props.page):()=>{}}>       
+                            <img src="../svg/arrow.svg" alt="right"  />    
+                        </div>
                     </div>
 
                 </div>

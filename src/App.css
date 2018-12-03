@@ -92,33 +92,39 @@
 .Carousel__arrow{
   position: absolute;
   z-index: 1;
-  top: 258px;
+  top: 300px;
   height: 160px;
   display: inline-block;
 }
+
 .Carousel__arrow--left{
   position: fixed;
-  width:80px;
-  height: 160px;
+  width:60px;
+  height: 100px;
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
   left: 0;
   transform: rotate(180deg);
-  border-top-left-radius: 80px;
-  border-bottom-left-radius: 80px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   opacity: 0.35;
   background-color:darkgray;
+  padding-left:-80px;
+}
+.Carousel__arrow--left img, .Carousel__arrow--right img{
+  margin-left: 25px;
+  margin-top: 20px;
 }
 .Carousel__arrow--left:hover{
   opacity: 1;
 }
 .Carousel__arrow--right{
   position: fixed;
-  width:80px;
-  height: 160px;
+  width:60px;
+  height: 100px;
+  border-top-left-radius: 60px;
+  border-bottom-left-radius: 60px;
   right:0;
-  border-top-left-radius: 80px;
-  border-bottom-left-radius: 80px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   opacity: 0.2;
@@ -161,8 +167,16 @@
   }
   .Carousel__arrow--left{
     left: 2.7rem;
+    width:60px;
+    height: 100px;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
   }
   .Carousel__arrow--right{
     right: 2.7rem;
+    width:60px;
+    height: 100px;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
   }
 }
